@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <agm-map [latitude]="lat" [longitude]="lng">
+
+    <!-- <agm-marker [latitude]="marker.lat" [longitude]="marker.lng" [iconUrl]="marker.iconUrl"></agm-marker> -->
+
+    <agm-direction [origin]="origin" [destination]="destination" [waypoints]="waypoints"></agm-direction>
+
+
+
+  </agm-map>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        SiteName
+      </ion-col>
+
+      <ion-col>
+        Mexico City
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Date
+      </ion-col>
+
+      <ion-col>
+        07/02/2018
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Route Name
+      </ion-col>
+
+      <ion-col>
+        Route 1
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Programmed Visits
+      </ion-col>
+
+      <ion-col>
+        5
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Visited
+      </ion-col>
+
+      <ion-col>
+        3
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br>
+
+  <button ion-button type="button" class="btn btn-primary btn-sm pull-right" (click)="openModal()">Feedback</button>
+
+
+
+
+</ion-content>

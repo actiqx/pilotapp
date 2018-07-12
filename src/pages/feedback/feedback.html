@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ModalPage</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>Gaming</ion-label>
+      <ion-select [(ngModel)]="selectedStatus" (ionChange)="onStatusTypeChange($event)">
+        <ion-option *ngFor="let type of status" [value]="type">{{type.status_type}}</ion-option>
+
+      </ion-select>
+    </ion-item>
+    <ion-item *ngIf="showMotive">
+      <ion-label>Motives</ion-label>
+      <ion-select [(ngModel)]="selectedMotive">
+        <ion-option>Unreachable</ion-option>
+        <ion-option>Closed</ion-option>
+
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+
+
+
+  <button ion-button type="submit" class="btn btn-success pull-right" (click)="submitFeedBack()">Submit</button>
+
+
+
+
+
+
+</ion-content>
